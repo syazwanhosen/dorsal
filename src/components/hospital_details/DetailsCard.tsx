@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+import { Icon } from "leaflet";
 import { fetchHospitalMetadata } from "@/api/Hospital/api";
 import Spinner from "../Spinner";
+import marker from "../../assets/marker-icon-2x.png";
+
 /* import { Button } from "../ui/button"; */
 
 // Resize map after mount to fix size issues
@@ -14,6 +17,13 @@ const ResizeMap = () => {
   }, [map]);
   return null;
 };
+
+const markerIcon = new Icon({
+  iconUrl: marker,
+  iconSize: [20, 30],
+  iconAnchor: [15, 30],
+  popupAnchor: [0, -30],
+});
 
 export const DetailsCard = () => {
   const location = useLocation();
@@ -84,8 +94,9 @@ export const DetailsCard = () => {
                     />
                     <Marker
                       position={[hospitalData.latitude, hospitalData.longitude]}
+                      icon={markerIcon}
                     >
-                      <Popup>{hospitalData.name}</Popup>
+                      <Popup>aa</Popup>
                     </Marker>
                     <ResizeMap />
                   </MapContainer>
