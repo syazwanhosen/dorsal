@@ -1,0 +1,1 @@
+import{j as t}from"./radix-hoWLJplZ.js";import"./react-DyejIWKk.js";function m(){return t.jsx("h1",{className:"text-lg font-medium text-[#8770BC] ml-10",children:"Abrar Rahman"})}export{m as default};

@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/api/votes", "destination": "/api/votes.js" },
+    { "source": "/api/vote", "destination": "/api/vote.js" },
+    { "source": "/api/votes/:id", "destination": "/api/votes/[id].js" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

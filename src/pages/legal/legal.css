@@ -1,0 +1,6 @@
+@media (max-width: 1535px) {
+  .privacy-policy-container,
+  .security-container {
+    padding: 1rem;
+  }
+}

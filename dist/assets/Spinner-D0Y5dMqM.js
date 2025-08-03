@@ -1,0 +1,1 @@
+import{j as e}from"./radix-hoWLJplZ.js";function t({open:r}){return r?e.jsx("div",{className:"absolute inset-0 z-10 flex items-center justify-center bg-white/70 backdrop-blur-sm",children:e.jsx("div",{className:"w-10 h-10 border-4 border-gray-200 border-t-purple-600 rounded-full animate-spin"})}):null}export{t as S};

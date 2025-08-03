@@ -1,0 +1,34 @@
+.body-bg
+{
+    background: #F4F5F9;
+    height: 100vh;
+}
+
+.input-bg
+{
+    background-color: #F4F5F9;
+    margin-top: 0.5rem;
+}
+
+.login-btn
+{
+    background: #8770BC;
+    padding: 0.8rem 0;
+}
+
+.primary-color
+{
+    color: #8770BC;
+}
+
+.primary-bg
+{
+    background-color: #8770BC;
+}
+
+.btn-radius
+{
+    padding: 0.8rem;
+    border-radius: 5rem;
+}
+

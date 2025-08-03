@@ -1,0 +1,1 @@
+import{j as e}from"./radix-hoWLJplZ.js";import{h as t}from"./index-Bl-JI4NS.js";import{S as i}from"./Spinner-D0Y5dMqM.js";function s(n){return t(r=>{var o;return((o=r[n])==null?void 0:o.loading)??!1})}function u({sliceKey:n,children:r}){const o=s(n);return e.jsxs(e.Fragment,{children:[e.jsx(i,{open:o}),r]})}export{u as W};

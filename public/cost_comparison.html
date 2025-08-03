@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Price Comparison</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ 
+    <style>
+        body {
+        
+            background-color: fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        #chartSection {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            width: 90%;
+            margin: auto;
+        }
+
+        .chart-container {
+            width: 100%;
+            height: 400px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="chartSection">
+        <div class="chart-container">
+            <canvas id="lineChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        function renderChart(labels, prices1, prices2, hospital1, hospital2, priceType) {
+            const ctx = document.getElementById("lineChart").getContext("2d");
+
+            // Destroy existing chart if it exists
+            if (window.chart) {
+                window.chart.destroy();
+            }
+
+            // Create a new chart with styled x-axis labels
+            window.chart = new Chart(ctx, {
+                type: "line",
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: hospital1,
+                            data: prices1,
+                            borderColor: "#4361ee",
+                            backgroundColor: "rgba(67, 97, 238, 0.2)",
+                            borderWidth: 3,
+                            pointBackgroundColor: "#4361ee",
+                            pointRadius: 6,
+                            pointHoverRadius: 8,
+                            tension: 0.4,
+                        },
+                        {
+                            label: hospital2,
+                            data: prices2,
+                            borderColor: "#f72585",
+                            backgroundColor: "rgba(247, 37, 133, 0.2)",
+                            borderWidth: 3,
+                            pointBackgroundColor: "#f72585",
+                            pointRadius: 6,
+                            pointHoverRadius: 8,
+                            tension: 0.4,
+                        },
+                    ],
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: "top",
+                            labels: {
+                                usePointStyle: true,
+                                pointStyle: "circle",
+                                font: {
+                                    family: 'Poppins',
+                                    size: 14,
+                                },
+                                padding: 20,
+                            },
+                        },
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: "Price (USD)",
+                                font: {
+                                    size: 16,
+                                    weight: 'bold',
+                                },
+                            },
+                            ticks: {
+                                font: {
+                                    size: 12,
+                                },
+                            },
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: "Medical Services",
+                                font: {
+                                    size: 16,
+                                    weight: 'bold',                                 
+                                },
+                                padding: {
+                                top: 20 
+                               }
+                            },
+                            ticks: {
+                                font: {
+                                    size: 12,
+                                },
+                                color: "#333", // Label color
+                                maxRotation: 45, // Rotate labels for better readability
+                                minRotation: 45, // Fixed rotation angle
+                                align: "center", // Align labels
+                            },
+                        },
+                    },
+                },
+            });
+        }
+
+        window.addEventListener("message", (event) => {
+            if (event.data?.type === "compareHospitals") {
+                const { hospitals, data, priceType } = event.data;
+
+                if (!hospitals || !data) {
+                    console.error("Invalid data received");
+                    return;
+                }
+
+                const labels = Object.keys(data);
+                const prices1 = labels.map(label => data[label]?.[hospitals[0]]?.[priceType] || null);
+                const prices2 = labels.map(label => data[label]?.[hospitals[1]]?.[priceType] || null);
+                renderChart(labels, prices1, prices2, hospitals[0], hospitals[1], priceType);
+            }
+        });
+    </script>
+</body>
+</html>

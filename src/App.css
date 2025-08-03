@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  @apply bg-gray-50 text-gray-900 antialiased overflow-x-hidden;
+}
+
+select {
+  color: #495057;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23495057" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+  transition: var(--transition);
+  appearance: none;
+}
+
+.table-responsive {
+  @apply overflow-x-auto w-full;
+}
+
+.the-seasons {
+  font-family: 'the-seasons', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* Root Theme Variables */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 258 36% 59%;
+    --input: 258 36% 59%;
+    --ring: 262.1 83.3% 57.8%;
+
+    --radius: 0.5rem;
+  }
+
+  /*.dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 258 36% 59%;
+    --input: 258 36% 59%;
+    --ring: 263.4 70% 50.4%;
+  }*/
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Shadow animation for Hero Cards */
+.shadow {
+  position: absolute;
+  background: hsl(var(--primary) / 0%);
+  border-radius: 24px;
+  rotate: 35deg;
+  width: 260px;
+  top: 200px;
+  height: 400px;
+  filter: blur(150px);
+  animation: shadow-slide infinite 4s linear alternate;
+}
+
+@keyframes shadow-slide {
+  from {
+    background: hsl(var(--primary) / 20%);
+    right: 460px;
+  }
+
+  to {
+    background: hsl(var(--primary) / 80%);
+    right: 160px;
+  }
+}
+
+@media (max-width: 1535px) {
+  .upload-bill,
+  .footer,
+  .navbar-container {
+    padding: 1rem;
+  }
+}
+/* Responsive Shadow Tweaks */
+@media (max-width: 1024px) {
+  .shadow {
+    top: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  .roadmap-button {
+    margin: auto;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .shadow {
+    top: 70px;
+    width: 100px;
+    height: 350px;
+    filter: blur(60px);
+  }
+
+  @keyframes shadow-slide {
+    from {
+      background: hsl(var(--primary) / 20%);
+      right: 280px;
+    }
+
+    to {
+      background: hsl(var(--primary) / 30%);
+      right: 100px;
+    }
+  }
+}
+
+/* Other tweaks */
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+.animate-gradient {
+  animation: gradientAnimation 3s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* -------------- Color -------------- */
+
+.text-purple{
+  color: #8770BC;
+}
+
+.bg-purple{
+  background-color: #8770BC;
+}
+
+.bg-light-purple{
+  background-color: #EEEBF4;
+}
+
+.bg-light-green{
+  background-color: #E2F6CB;
+}
+
+.text-green{
+  color: #6CA624;
+}
+
+.bg-light-red{
+  background-color: #FFDFDF;
+}
+
+.text-red{
+  color: #CE3C29;
+}
+
+.bg-light-yellow{
+  background-color: #FFF5DA;
+}
+
+.text-yellow{
+  color: #F3CC5C;
+}
+
+.bg-green-legend {
+  background-color: #6CA724;
+}
+
+.bg-red-legend {
+  background-color: #CE3C29;
+}
+
+.bg-gradient-light-purple
+{
+    background: linear-gradient(90deg, #D5D3F3 0%, #817DDC 100%);
+}
+
+.light-shadow {
+  box-shadow: 
+  0 10px 15px -3px rgb(0 0 0 / 3%), 0 4px 6px -4px rgb(0 0 0 / 9%);
+}
+
+
+
+/* For Webkit browsers (Chrome, Safari) */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #8770BC;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 769px) {
+  .book-now-button {
+    font-size: 13px !important;
+  }
+}

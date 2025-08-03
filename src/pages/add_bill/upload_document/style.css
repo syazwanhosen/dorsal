@@ -1,0 +1,18 @@
+.upload-file-card-content {
+    padding-bottom: 0 !important;
+}
+
+.upload-file-accordion-item button {
+    text-decoration: none !important;
+}
+
+.upload-file-accordion-item:last-child {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.upload-file-accordion-item [aria-expanded="true"] {
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 1rem;
+}

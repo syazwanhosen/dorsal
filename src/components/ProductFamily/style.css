@@ -1,0 +1,20 @@
+.splide__arrow {
+  @apply absolute z-10 flex items-center justify-center w-11 h-11 bg-white/80 backdrop-blur-md text-gray-800 shadow-md rounded-full 
+         transition-all duration-300 ease-in-out hover:bg-purple-700 hover:text-white hover:scale-110  dark:text-white;
+}
+
+.splide__arrow--prev {
+  @apply -left-4 top-1/2 -translate-y-1/2 ml-5;
+}
+
+.splide__arrow--next {
+  @apply -right-4 top-1/2 -translate-y-1/2 mr-5;
+}
+
+.splide__arrow svg {
+  @apply w-5 h-5;
+}
+
+.splide__track {
+  will-change: transform;
+}

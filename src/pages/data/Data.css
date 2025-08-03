@@ -1,0 +1,43 @@
+.text-purple{
+    color: #8770BC;
+}
+
+.bg-purple{
+    background-color: #8770BC;
+}
+
+.bg-light-purple{
+    background-color: #EEEBF4;
+}
+
+.bg-light-green{
+    background-color: #E2F6CB;
+}
+
+.text-green{
+    color: #6CA624;
+}
+
+.bg-light-red{
+    background-color: #FFDFDF;
+}
+
+.text-red{
+    color: #CE3C29;
+}
+
+.bg-light-yellow{
+    background-color: #FFF5DA;
+}
+
+.text-yellow{
+    color: #F3CC5C;
+}
+
+.bg-green-legend {
+    background-color: #6CA724;
+}
+
+.bg-red-legend {
+    background-color: #CE3C29;
+}
