@@ -17,7 +17,7 @@ const RoadmapCTA = () => {
              lg:bg-center lg:bg-no-repeat lg:bg-[length:100%_100%]
              lg:bg-gradient-none lg:h-[500px]"
     >
-      <div className=" px-6 grid grid-cols-1 md:grid-cols-[1fr_0.7fr] items-center gap-10 w-full">
+      <div className=" px-6 grid grid-cols-1 md:grid-cols-[1fr_0.7fr] items-center gap-10 w-full justify-items-center">
         {/* 📝 Content Block */}
         <div className="md:text-left text-center">
           <span className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-white mb-4">
@@ -35,7 +35,7 @@ const RoadmapCTA = () => {
           </p>
           <button
             onClick={() => navigate("/roadmap")}
-            className="roadmap-button bg-white text-black text-[0.5rem] sm:text-xs font-medium px-5 py-3 rounded-md hover:bg-gray-200 transition flex items-center"
+            className="roadmap-button bg-white text-black text-xs font-medium px-5 py-3 rounded-md hover:bg-gray-200 transition flex items-center"
           >
             Contribute to Dorsal Product Roadmap
             <ArrowRight className="ml-2 h-4 w-4 align-middle" />

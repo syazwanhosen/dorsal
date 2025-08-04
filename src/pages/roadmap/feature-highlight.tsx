@@ -151,7 +151,7 @@ export function FeatureHighlight({ feature }: FeatureHighlightProps) {
           <Button
             variant="ghost"
             size="sm"
-            className="text-purple hover:text-purple-700 px-0 py-0 mb-4"
+            className="text-purple hover:text-purple-700 px-0 py-0 mb-4 hidden sm:block"
             onClick={() => setExpanded(!expanded)}
           >
             {expanded ? "Show less" : "Learn more"}

@@ -145,6 +145,7 @@ select {
 @media (max-width: 767px) {
   .roadmap-button {
     margin: auto;
+    width: max-content;
   }
 }
 

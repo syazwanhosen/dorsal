@@ -230,7 +230,7 @@ export function FeatureCard({ feature, featureMapping }: FeatureCardProps) {
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between">
             <div className="flex items-center gap-3">
-              <div className="bg-purple-50 p-2 rounded-md">{getFeatureIcon(feature.icon)}</div>
+              <div className="bg-purple-50 p-2 rounded-md hidden sm:block">{getFeatureIcon(feature.icon)}</div>
               <div>
                 <h3 className="font-semibold text-gray-900">{feature.title}</h3>
                 <div className="flex flex-wrap items-center gap-2 mt-1 text-sm">
