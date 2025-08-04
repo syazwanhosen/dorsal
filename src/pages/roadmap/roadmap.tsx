@@ -294,7 +294,7 @@ useEffect(() => {
                   <Tabs value={activeCategory} onValueChange={setActiveCategory}>
                     <TabsList
                         className="
-                          grid grid-cols-2 gap-2 w-full bg-gray-50 rounded-xl py-2 justify-start
+                          grid grid-cols-1 sm:grid-cols-2 gap-2 w-full bg-gray-50 rounded-xl py-2 justify-start
                           lg:flex lg:gap-2 lg:grid-cols-none
                         "
                       >
