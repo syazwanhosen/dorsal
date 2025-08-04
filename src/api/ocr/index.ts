@@ -10,7 +10,7 @@ export const uploadToOcrApi = async (
   formData.append("image_file", file);
 
   try {
-    const response = await axios.post("http://123.200.16.106:3838/ocr/cloud_ocr", formData, {
+    const response = await axios.post("https://dorsalai.apurbatech.io/ocr/cloud_ocr", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },

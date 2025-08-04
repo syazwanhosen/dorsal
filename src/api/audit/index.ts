@@ -13,7 +13,7 @@ interface AuditPayload {
 
 export const postAuditData = async (payload: AuditPayload): Promise<any> => {
   try {
-    const response = await axios.post('http://123.200.16.106:3838/audit/audit', payload);
+    const response = await axios.post('https://dorsalai.apurbatech.io/audit/audit', payload);
 
     return response.data;
   } catch (error: any) {

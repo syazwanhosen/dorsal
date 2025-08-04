@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://123.200.16.106:3838/ocr/get_recent_uploads';
+const API_URL = 'https://dorsalai.apurbatech.io/ocr/get_recent_uploads';
 
 export type RecentUpload = {
   hospital_name: string;
