@@ -35,7 +35,7 @@ const RoadmapCTA = () => {
           </p>
           <button
             onClick={() => navigate("/roadmap")}
-            className="roadmap-button bg-white text-black text-sm font-medium px-5 py-3 rounded-md hover:bg-gray-200 transition flex items-center"
+            className="roadmap-button bg-white text-black text-[0.5rem] sm:text-xs font-medium px-5 py-3 rounded-md hover:bg-gray-200 transition flex items-center"
           >
             Contribute to Dorsal Product Roadmap
             <ArrowRight className="ml-2 h-4 w-4 align-middle" />
